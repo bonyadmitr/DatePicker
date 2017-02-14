@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jfe-dp-OtF">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DatePickerTextField-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGO-7u-INK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="555-nP-OjN">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4QA-F4-ynB" customClass="DatePickerTextField" customModule="DatePicker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="386" width="280" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="dateFormat" value="yyyy/MM/dd -:- hh:mm a"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="4QA-F4-ynB" firstAttribute="leading" secondItem="555-nP-OjN" secondAttribute="leading" constant="20" id="1ql-BI-daE"/>
+                                            <constraint firstAttribute="bottom" secondItem="4QA-F4-ynB" secondAttribute="bottom" id="H0v-f4-RZd"/>
+                                            <constraint firstAttribute="trailing" secondItem="4QA-F4-ynB" secondAttribute="trailing" constant="20" id="edY-G3-IBb"/>
+                                            <constraint firstItem="4QA-F4-ynB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="555-nP-OjN" secondAttribute="top" constant="10" id="gpX-4M-i2T"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="555-nP-OjN" secondAttribute="bottom" id="3aq-RW-vUN"/>
+                                    <constraint firstItem="555-nP-OjN" firstAttribute="height" secondItem="JGO-7u-INK" secondAttribute="height" priority="250" id="Inv-a1-duV"/>
+                                    <constraint firstItem="555-nP-OjN" firstAttribute="top" secondItem="JGO-7u-INK" secondAttribute="top" id="M0J-cs-sM5"/>
+                                    <constraint firstItem="555-nP-OjN" firstAttribute="leading" secondItem="JGO-7u-INK" secondAttribute="leading" id="vfs-y3-7mv"/>
+                                    <constraint firstAttribute="trailing" secondItem="555-nP-OjN" secondAttribute="trailing" id="vlE-Jg-UQN"/>
+                                    <constraint firstItem="555-nP-OjN" firstAttribute="width" secondItem="JGO-7u-INK" secondAttribute="width" id="wd9-rp-t9A"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JGO-7u-INK" secondAttribute="trailing" id="95Y-2A-hYp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JGO-7u-INK" secondAttribute="bottom" id="QPE-Oa-rc5" customClass="KeyboardLayoutConstraint" customModule="DatePicker" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyboardInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="JGO-7u-INK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WIP-HH-ai2"/>
+                            <constraint firstItem="JGO-7u-INK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wBU-6W-VAL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DatePickerTextField" id="QMc-Y1-Xh4"/>
+                    <connections>
+                        <outlet property="datePickerTextField" destination="4QA-F4-ynB" id="cou-ja-axW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="SeP-0g-In8" customClass="KeyboardHideManager" customModule="DatePicker" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="targets" destination="555-nP-OjN" collectionClass="NSMutableArray" id="U1Z-F7-mff"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="870" y="159"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HGe-R1-T3Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jfe-dp-OtF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="3E6-53-cii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="22E-Tp-Xnz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAw-G1-zCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.5" y="158.75"/>
+        </scene>
+    </scenes>
+</document>
